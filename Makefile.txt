@@ -1,0 +1,24 @@
+CC      = gcc
+LD      = gcc
+
+CFLAGS  = -Wall
+LFLAGS  = -Wall
+
+CLIENTOBJS = client.o
+SERVEROBJS = server.o
+
+ALLEXEC =  server client
+
+.c.o:
+        $(CC) $(CFLAGS) -c $<
+
+all:    $(ALLEXEC)
+
+client: $(CLIENTOBJS)
+
+
+server: $(SERVEROBJS)
+        $(LD) $(LFAGS) -o $@ $(SERVEROBJS)
+
+clean:
+        rm -f *.o $(ALLEXEC)
