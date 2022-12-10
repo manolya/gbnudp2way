@@ -1,4 +1,9 @@
 # gbnudp2way
+
+METU - CENG 435 
+Fall 2022/2023 - 2nd Assignment
+
+
 Go-back-N method for 2 way UDP communication for reliable channel
 Use:
 $make
